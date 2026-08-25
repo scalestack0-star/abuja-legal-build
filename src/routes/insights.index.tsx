@@ -24,7 +24,8 @@ export const Route = createFileRoute("/insights/")({
 });
 
 function InsightsPage() {
-  const [featured, ...rest] = insights;
+  const featured = insights[0]!;
+  const rest = insights.slice(1);
 
   return (
     <>
