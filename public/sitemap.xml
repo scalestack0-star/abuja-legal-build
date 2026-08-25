@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: set BASE_URL to the firm's live domain once available, e.g. https://rskinyaandco.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/about</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas</loc><priority>0.9</priority></url>
+  <url><loc>/practice-areas/corporate-commercial-law</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/litigation-dispute-resolution</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/property-real-estate</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/family-law</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/employment-labour-law</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/debt-recovery</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/contracts</loc><priority>0.8</priority></url>
+  <url><loc>/practice-areas/legal-advisory</loc><priority>0.8</priority></url>
+  <url><loc>/why-choose-us</loc><priority>0.7</priority></url>
+  <url><loc>/insights</loc><priority>0.7</priority></url>
+  <url><loc>/insights/what-to-consider-before-signing-a-contract-in-nigeria</loc><priority>0.6</priority></url>
+  <url><loc>/insights/understanding-property-transactions-in-abuja</loc><priority>0.6</priority></url>
+  <url><loc>/insights/what-to-do-when-a-commercial-dispute-arises</loc><priority>0.6</priority></url>
+  <url><loc>/insights/legal-considerations-for-starting-a-business-in-nigeria</loc><priority>0.6</priority></url>
+  <url><loc>/contact</loc><priority>0.9</priority></url>
+  <url><loc>/privacy-policy</loc><priority>0.3</priority></url>
+  <url><loc>/terms-of-use</loc><priority>0.3</priority></url>
+  <url><loc>/legal-disclaimer</loc><priority>0.3</priority></url>
+</urlset>

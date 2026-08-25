@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LegalDisclaimerRouteImport } from './routes/legal-disclaimer'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
+import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
+import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
+import { Route as PracticeAreasIndexRouteImport } from './routes/practice-areas.index'
+import { Route as PracticeAreasSlugRouteImport } from './routes/practice-areas.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalDisclaimerRoute = LegalDisclaimerRouteImport.update({
+  id: '/legal-disclaimer',
+  path: '/legal-disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfUseRoute = TermsOfUseRouteImport.update({
+  id: '/terms-of-use',
+  path: '/terms-of-use',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
+  id: '/why-choose-us',
+  path: '/why-choose-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsIndexRoute = InsightsIndexRouteImport.update({
+  id: '/insights/',
+  path: '/insights/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsSlugRoute = InsightsSlugRouteImport.update({
+  id: '/insights/$slug',
+  path: '/insights/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PracticeAreasIndexRoute = PracticeAreasIndexRouteImport.update({
+  id: '/practice-areas/',
+  path: '/practice-areas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PracticeAreasSlugRoute = PracticeAreasSlugRouteImport.update({
+  id: '/practice-areas/$slug',
+  path: '/practice-areas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/legal-disclaimer': typeof LegalDisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/practice-areas/$slug': typeof PracticeAreasSlugRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/practice-areas/': typeof PracticeAreasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/legal-disclaimer': typeof LegalDisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/practice-areas/$slug': typeof PracticeAreasSlugRoute
+  '/insights': typeof InsightsIndexRoute
+  '/practice-areas': typeof PracticeAreasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/legal-disclaimer': typeof LegalDisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/practice-areas/$slug': typeof PracticeAreasSlugRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/practice-areas/': typeof PracticeAreasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/legal-disclaimer'
+    | '/privacy-policy'
+    | '/terms-of-use'
+    | '/why-choose-us'
+    | '/insights/$slug'
+    | '/practice-areas/$slug'
+    | '/insights/'
+    | '/practice-areas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/legal-disclaimer'
+    | '/privacy-policy'
+    | '/terms-of-use'
+    | '/why-choose-us'
+    | '/insights/$slug'
+    | '/practice-areas/$slug'
+    | '/insights'
+    | '/practice-areas'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/legal-disclaimer'
+    | '/privacy-policy'
+    | '/terms-of-use'
+    | '/why-choose-us'
+    | '/insights/$slug'
+    | '/practice-areas/$slug'
+    | '/insights/'
+    | '/practice-areas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  LegalDisclaimerRoute: typeof LegalDisclaimerRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsOfUseRoute: typeof TermsOfUseRoute
+  WhyChooseUsRoute: typeof WhyChooseUsRoute
+  InsightsSlugRoute: typeof InsightsSlugRoute
+  PracticeAreasSlugRoute: typeof PracticeAreasSlugRoute
+  InsightsIndexRoute: typeof InsightsIndexRoute
+  PracticeAreasIndexRoute: typeof PracticeAreasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal-disclaimer': {
+      id: '/legal-disclaimer'
+      path: '/legal-disclaimer'
+      fullPath: '/legal-disclaimer'
+      preLoaderRoute: typeof LegalDisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-use': {
+      id: '/terms-of-use'
+      path: '/terms-of-use'
+      fullPath: '/terms-of-use'
+      preLoaderRoute: typeof TermsOfUseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-choose-us': {
+      id: '/why-choose-us'
+      path: '/why-choose-us'
+      fullPath: '/why-choose-us'
+      preLoaderRoute: typeof WhyChooseUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/': {
+      id: '/insights/'
+      path: '/insights'
+      fullPath: '/insights/'
+      preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/$slug': {
+      id: '/insights/$slug'
+      path: '/insights/$slug'
+      fullPath: '/insights/$slug'
+      preLoaderRoute: typeof InsightsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice-areas/': {
+      id: '/practice-areas/'
+      path: '/practice-areas'
+      fullPath: '/practice-areas/'
+      preLoaderRoute: typeof PracticeAreasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice-areas/$slug': {
+      id: '/practice-areas/$slug'
+      path: '/practice-areas/$slug'
+      fullPath: '/practice-areas/$slug'
+      preLoaderRoute: typeof PracticeAreasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  LegalDisclaimerRoute: LegalDisclaimerRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsOfUseRoute: TermsOfUseRoute,
+  WhyChooseUsRoute: WhyChooseUsRoute,
+  InsightsSlugRoute: InsightsSlugRoute,
+  PracticeAreasSlugRoute: PracticeAreasSlugRoute,
+  InsightsIndexRoute: InsightsIndexRoute,
+  PracticeAreasIndexRoute: PracticeAreasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
