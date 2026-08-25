@@ -12,6 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LegalDisclaimerRouteImport } from './routes/legal-disclaimer'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
 import { Route as InsightsIndexRouteImport } from './routes/insights.index'
 import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
@@ -31,6 +34,21 @@ const AboutRoute = AboutRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalDisclaimerRoute = LegalDisclaimerRouteImport.update({
+  id: '/legal-disclaimer',
+  path: '/legal-disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfUseRoute = TermsOfUseRouteImport.update({
+  id: '/terms-of-use',
+  path: '/terms-of-use',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
@@ -63,6 +81,9 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/legal-disclaimer': typeof LegalDisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/why-choose-us': typeof WhyChooseUsRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/practice-areas/$slug': typeof PracticeAreasSlugRoute
@@ -73,6 +94,9 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/legal-disclaimer': typeof LegalDisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/why-choose-us': typeof WhyChooseUsRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/practice-areas/$slug': typeof PracticeAreasSlugRoute
@@ -84,6 +108,9 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/legal-disclaimer': typeof LegalDisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/why-choose-us': typeof WhyChooseUsRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/practice-areas/$slug': typeof PracticeAreasSlugRoute
@@ -96,6 +123,9 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/legal-disclaimer'
+    | '/privacy-policy'
+    | '/terms-of-use'
     | '/why-choose-us'
     | '/insights/$slug'
     | '/practice-areas/$slug'
@@ -106,6 +136,9 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/legal-disclaimer'
+    | '/privacy-policy'
+    | '/terms-of-use'
     | '/why-choose-us'
     | '/insights/$slug'
     | '/practice-areas/$slug'
@@ -116,6 +149,9 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/legal-disclaimer'
+    | '/privacy-policy'
+    | '/terms-of-use'
     | '/why-choose-us'
     | '/insights/$slug'
     | '/practice-areas/$slug'
@@ -127,6 +163,9 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  LegalDisclaimerRoute: typeof LegalDisclaimerRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsOfUseRoute: typeof TermsOfUseRoute
   WhyChooseUsRoute: typeof WhyChooseUsRoute
   InsightsSlugRoute: typeof InsightsSlugRoute
   PracticeAreasSlugRoute: typeof PracticeAreasSlugRoute
@@ -155,6 +194,27 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal-disclaimer': {
+      id: '/legal-disclaimer'
+      path: '/legal-disclaimer'
+      fullPath: '/legal-disclaimer'
+      preLoaderRoute: typeof LegalDisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-use': {
+      id: '/terms-of-use'
+      path: '/terms-of-use'
+      fullPath: '/terms-of-use'
+      preLoaderRoute: typeof TermsOfUseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/why-choose-us': {
@@ -199,6 +259,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  LegalDisclaimerRoute: LegalDisclaimerRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsOfUseRoute: TermsOfUseRoute,
   WhyChooseUsRoute: WhyChooseUsRoute,
   InsightsSlugRoute: InsightsSlugRoute,
   PracticeAreasSlugRoute: PracticeAreasSlugRoute,
